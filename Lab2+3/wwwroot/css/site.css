@@ -1,0 +1,60 @@
+html {
+    font-size: 14px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.alert-list {
+    z-index: 1;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    transition: all linear .3s;
+}
+
+.alert {
+    transition: all linear .3s;
+    animation: ease-in-out .3s sliedLeft, linear 1s fadeOut 2s forwards;
+}
+
+@keyframes sliedLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
